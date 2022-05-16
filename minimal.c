@@ -11,12 +11,12 @@ int main(int argc,char *argv[])
 	opterr = 0;
 	
 
-	while ((option = getopt(argc, argv, "hv:")) != -1)
+	while ((option = getopt(argc, argv, "hd:")) != -1)
 	switch (option)
       	{	
 		//minimal
       		case 'h':
-        	printf("-h for help \n-v [text] um Text auszugeben\n");
+        	printf("-h for help \n-d [text] um Text auszugeben\n");
         	break;
       		case 'v':
 		vvalue = optarg;
@@ -24,7 +24,7 @@ int main(int argc,char *argv[])
         	break;
 		//optional error handling
       		case '?':
-        	if (optopt == 'v')
+        	if (optopt == 'd')
 		{
         		fprintf (stderr, "This is not 'Nam, this is programming. There are rules! -%c requires an argument.\n", optopt);
 		}       	
