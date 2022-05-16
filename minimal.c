@@ -11,8 +11,8 @@ int main(int argc,char *argv[])
 	opterr = 0;
 	
 
-	while ((c = getopt(argc, argv, "hv:")) != -1)
-	switch (c)
+	while ((option = getopt(argc, argv, "hv:")) != -1)
+	switch (option)
       	{	
 		//minimal
       		case 'h':
