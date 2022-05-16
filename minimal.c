@@ -7,7 +7,7 @@
 int main(int argc,char *argv[])
 {
 	char *vvalue = NULL;
-	int c;
+	int option;
 	opterr = 0;
 	
 
